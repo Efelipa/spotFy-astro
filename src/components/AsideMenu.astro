@@ -1,0 +1,33 @@
+---
+import LibraryIcon from "../icons/Library.astro";
+import HomeIcon from "../icons/Home.astro";
+import SearchIcon from "../icons/Search.astro";
+import SpotifyIcon from "../icons/Spotify.astro";
+import LinkIcon from "../components/LinkIcon.astro";
+---
+<nav class="flex flex-col flex-1 gap-2">
+    <div class="bg-zinc-900 rounded-lg p-2">
+        <ul class="px-2">
+            <LinkIcon href="/">
+                <SpotifyIcon/>
+            </LinkIcon>
+            <LinkIcon href="/">
+                <HomeIcon/>
+                <span class="font-bold">Home
+            </LinkIcon>
+            <LinkIcon href="/">
+                <SearchIcon/>
+                <span class="font-bold">Search</span>
+            </LinkIcon>
+        </ul>
+    </div>
+    <div class="bg-zinc-900 rounded-lg p-2 flex-1">
+        <ul class="px-2">
+            <LinkIcon href="/">
+                <LibraryIcon/>
+                Tu biblioteca
+            </LinkIcon>
+        </ul>
+
+    </div>
+</nav>

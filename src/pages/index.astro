@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AsideMenu from '../components/AsideMenu.astro';
+
+---
+
+<Layout title="Clon de Spotify">
+	<div id="app" class="relative h-screen p-2 gap-2 flex items-stretch">
+		<aside class="[grid-area:aside] flex-col flex overflow-y-auto">
+			<AsideMenu>
+			</AsideMenu> 
+		</aside>
+		<main class="[grid-area:main] rounded-lg overflow-y-auto bg-zinc-900">
+		</main>
+		<footer class="[grid-area:player] min-h-[100px]">
+		</footer>
+	</div>
+</Layout>
+
+<style>
+	#app {
+	display: grid;
+	grid-template-areas: 
+		"aside main main"
+		"player player player";
+	grid-template-columns: 350px 1fr;
+	grid-template-rows: 1fr auto;
+}
+</style>
